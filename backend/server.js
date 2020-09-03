@@ -6,10 +6,12 @@ const port = process.env.PORT || 8000;
 const passport = require('passport');
 
 
-// app.use(cors())
+app.use(cors());
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Backend home route');
+  res.status(200).json({message: 'Smile, you are being watched by the Backend Team'});
 });
 
 app.listen(port, () => {
