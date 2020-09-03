@@ -9,7 +9,7 @@ mongoose.connect(process.env.MONGO_URI, {
 });
 
 // Mongoose connection object
-const db = mongoose.connection();
+const db = mongoose.connection;
 
 // set up an event listener to fire once when the connection 'opens'
 // console log what hst and port it's running on
