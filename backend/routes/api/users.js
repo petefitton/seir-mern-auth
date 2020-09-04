@@ -62,6 +62,7 @@ router.post('/login', (req, res) => {
       res.status(400).json({ msg: "User Not Found" });
     }
     // Check password with bcrypt
+    console.log(userFound);
     bcrypt.compare(password, userFound.password)
     .then(isMatch => {
       console.log(isMatch);
